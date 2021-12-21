@@ -71,9 +71,7 @@ echo "KEYMAP=de-latin1" >/etc/vconsole.conf
 
 echo "Workstation" >/etc/hostname
 
-cat >/etc/mkinitcpio.conf <<EOF
-HOOKS=(base systemd keyboard autodetect sd-vconsole modconf block sd-encrypt lvm2 filesystems fsck)
-EOF
+cat >/etc/mkinitcpio.conf 'HOOKS=(base systemd keyboard autodetect sd-vconsole modconf block sd-encrypt lvm2 filesystems fsck)'
 
 mkinitcpio -P
 passwd
