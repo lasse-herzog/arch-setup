@@ -80,5 +80,5 @@ useradd -m -G wheel admin
 passwd admin
 echo "admin ALL=(ALL) ALL" >>/etc/sudoers.d/admin
 
-efibootmgr --disk "${disk}" --part 1 --create --label 'Arch Linux' --loader /vmlinuz-linux --unicode "rd.luks.name=${cryptroot_uuid}=cryptlvm root=${root} rw initrd=/initramfs-linux.img"
+efibootmgr --disk "${disk}" --part 1 --create --label 'Arch Linux' --loader /vmlinuz-linux --unicode "rd.luks.name=${cryptroot_uuid}=cryptlvm root=${root} rw initrd=/initramfs-linux-zen.img"
 EOF
